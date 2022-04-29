@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane
+        xmlns="http://javafx.com/javafx"
+        xmlns:fx="http://javafx.com/javafx"
+        prefHeight="400.0"
+        prefWidth="600.0"
+        fx:controller="com.example.firstfx.controllers.LoginController">
+    <children>
+        <Label layoutX="20" layoutY="100">Enter password: </Label>
+        <TextField fx:id="passwordField" layoutX="140" layoutY="100"></TextField>
+
+        <Label layoutX="20" layoutY="130">Enter name: </Label>
+        <TextField fx:id="displayNameField" layoutX="140" layoutY="130"></TextField>
+
+        <Button onAction="#authorize" layoutX="20" layoutY="160">Login</Button>
+    </children>
+</AnchorPane>
