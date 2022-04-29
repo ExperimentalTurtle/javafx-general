@@ -11,13 +11,11 @@
         prefHeight="400.0"
         prefWidth="600.0"
         fx:controller="com.example.firstfx.controllers.LoginController">
-    <children>
-        <Label layoutX="20" layoutY="100">Enter password: </Label>
-        <TextField fx:id="passwordField" layoutX="140" layoutY="100"></TextField>
+    <Label layoutX="20" layoutY="100">Enter password:</Label>
+    <TextField fx:id="passwordField" layoutX="140" layoutY="100"/>
 
-        <Label layoutX="20" layoutY="130">Enter name: </Label>
-        <TextField fx:id="displayNameField" layoutX="140" layoutY="130"></TextField>
+    <Label layoutX="20" layoutY="130">Enter name:</Label>
+    <TextField fx:id="displayNameField" layoutX="140" layoutY="130"/>
 
-        <Button onAction="#authorize" layoutX="20" layoutY="160">Login</Button>
-    </children>
+    <Button onAction="#authorize" layoutX="20" layoutY="160">Login</Button>
 </AnchorPane>

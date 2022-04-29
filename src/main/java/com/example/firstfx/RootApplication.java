@@ -1,42 +1,25 @@
 package com.example.firstfx;
 
+import com.example.firstfx.controllers.ScreenController;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
-import javafx.scene.layout.AnchorPane;
+import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 
 public class RootApplication extends Application {
-    private static RootApplication instance;
-
-    public Stage stage;
-    public Scene scene;
-    public AnchorPane content;
-
-    public static RootApplication getInstance() {
-        if (instance == null) {
-            instance = new RootApplication();
-        }
-
-        return instance;
-    }
-
+    //TODO https://stackoverflow.com/questions/37200845/how-to-switch-scenes-in-javafx
+    //TODO do this, best solution to scene changing
 
     @Override
     public void start(Stage primaryStage) throws IOException {
-        //TODO https://stackoverflow.com/questions/37200845/how-to-switch-scenes-in-javafx
-        //TODO do this, best solution to scene changing
-        FXMLLoader fxmlLoader = new FXMLLoader(RootApplication.class.getResource("login.fxml"));
-
-        content = fxmlLoader.load();
-        scene = new Scene(content);
-        stage = primaryStage;
-
-        stage.setTitle("Login");
-        stage.setScene(scene);
-        stage.show();
+        FXMLLoader fxmlLoader = new FXMLLoader(RootApplication.class.getResource("/com/example/firstfx/login.fxml"));
+        Scene scene = new Scene(fxmlLoader.load(), 1400, 800, Color.LIGHTSKYBLUE);
+        primaryStage.setTitle("Hello!");
+        primaryStage.setScene(scene);
+        primaryStage.show();
     }
 
     public static void main(String[] args) {
