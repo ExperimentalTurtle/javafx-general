@@ -17,7 +17,10 @@ public class RootApplication extends Application {
 
     @Override
     public void start(Stage primaryStage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(RootApplication.class.getResource("/com/example/firstfx/login.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(RootApplication.class.getResource("/com/example/firstfx/scene1.fxml"));
+
+        // start with login screen
+        // FXMLLoader fxmlLoader = new FXMLLoader(RootApplication.class.getResource("/com/example/firstfx/login.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 1400, 800, Color.LIGHTSKYBLUE);
         primaryStage.setTitle("Hello!");
         primaryStage.setScene(scene);
