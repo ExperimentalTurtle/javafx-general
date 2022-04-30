@@ -1,9 +1,11 @@
 package com.example.firstfx;
 
-import com.example.firstfx.controllers.ScreenController;
+import com.example.firstfx.controllers.Scene1Controller;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
+import javafx.scene.control.ButtonType;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 
@@ -20,10 +22,30 @@ public class RootApplication extends Application {
         primaryStage.setTitle("Hello!");
         primaryStage.setScene(scene);
         primaryStage.show();
+
+        // check something before exiting
+        primaryStage.setOnCloseRequest(event -> {
+            event.consume();
+            exit(primaryStage);
+        });
     }
 
     public static void main(String[] args) {
         launch();
+    }
+
+
+    public void exit(Stage stage) {
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+        alert.setTitle("Logout");
+        alert.setHeaderText("You are about to exit !");
+        alert.setContentText("Do you want to save before exiting ?");
+        alert.showAndWait();
+
+        if (alert.getResult() == ButtonType.OK) {
+            System.out.println("You have successfully exited");
+            stage.close();
+        }
     }
 }
 

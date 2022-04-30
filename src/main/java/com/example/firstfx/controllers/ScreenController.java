@@ -9,9 +9,16 @@ public class ScreenController {
     private HashMap<String, Pane> screenMap = new HashMap<>();
     private Scene main;
 
-    public ScreenController(Scene main) {
-        this.main = main;
+    private ScreenController() {}
+    private static ScreenController instance;
+    public static ScreenController getInstance() {
+        if (instance == null) {
+            instance = new ScreenController();
+        }
+
+        return instance;
     }
+
 
     public void addScreen(String name, Pane pane) {
         screenMap.put(name, pane);
