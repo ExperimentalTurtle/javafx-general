@@ -9,7 +9,7 @@
 .menu {
     -fx-background-color: fx-dark;
     -fx-padding: 5 10 5 10;
-    -fx-pref-height: 40;
+    -fx-pref-height: 35;
 }
 
 
@@ -21,8 +21,8 @@
 }
 
 .menu .label,
-.context-menu .label,
-.menu-item .label {
+.menu .context-menu .label,
+.menu .menu-item .label {
     -fx-text-fill: fx-light;
 }
 
@@ -30,13 +30,11 @@
     -fx-background-color: fx-dark-hover;
 }
 
-.menu-item:hover, .menu-item:focused{
+.menu .menu-item:hover, .menu .menu-item:focused{
     -fx-background-color: fx-dark-hover;
 }
 
-
-
-.context-menu .accelerator-text {
+.menu .context-menu .accelerator-text {
     /*! if icon needed for shortcut */
     /*! -fx-graphic: url("yourImageUrl"); */
 
@@ -46,20 +44,14 @@
     -fx-text-fill: fx-light-dim;
 }
 
-.menu-item {
+.menu .menu-item {
     -fx-color: fx-dark;
-    -fx-pref-height: 40;
+    -fx-pref-height: 35;
     -fx-insets: 0;
     -fx-background-insets: 0;
     -fx-pref-width: 250px;
 }
 
-.menu-item > .label {
+.menu .menu-item > .label {
     -fx-pref-width: 200px;
 }
-
-/*
-.menu-item >.label {-fx-font-size:17;}
-.menu >.label {-fx-font-size:17;}
-*/
-

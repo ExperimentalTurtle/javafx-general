@@ -42,7 +42,7 @@
     <Button layoutX="211.0" layoutY="357.0" mnemonicParsing="false" onAction="#prev" text="Prev" />
    <ColorPicker fx:id="colorPicker" layoutX="358.0" layoutY="358.0" onAction="#setBackgroundColor" />
    <ChoiceBox fx:id="choiceBox" layoutX="27.0" layoutY="465.0" prefWidth="150.0" />
-   <ComboBox layoutX="236.0" layoutY="465.0" prefWidth="150.0" />
+   <ComboBox fx:id="comboBox" layoutX="236.0" layoutY="465.0" prefWidth="150.0" />
    <SplitMenuButton layoutX="38.0" layoutY="403.0" mnemonicParsing="false" text="SplitMenuButton">
      <items>
        <MenuItem mnemonicParsing="false" text="Action 1" />

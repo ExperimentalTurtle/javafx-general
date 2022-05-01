@@ -135,11 +135,16 @@ public class Scene1Controller implements Initializable {
     @FXML
     ImageView animationImageView;
 
+    @FXML
+    ComboBox<String> comboBox;
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         choiceBox.getItems().addAll(generalItems);
         choiceBox.setValue(generalItems[0]);
         choiceBox.setOnAction(this::getFood);
+
+        comboBox.getItems().addAll(generalItems);
 
         listView.getItems().addAll(generalItems);
         listView.getSelectionModel().selectFirst();
