@@ -1,6 +1,5 @@
 package com.example.firstfx;
 
-import com.example.firstfx.controllers.Scene1Controller;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -10,7 +9,9 @@ import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.Objects;
 
+@SuppressWarnings("CommentedOutCode")
 public class RootApplication extends Application {
     //TODO https://stackoverflow.com/questions/37200845/how-to-switch-scenes-in-javafx
     //TODO do this, best solution to scene changing
@@ -26,11 +27,16 @@ public class RootApplication extends Application {
         primaryStage.setScene(scene);
         primaryStage.show();
 
-        // check something before exiting
-        primaryStage.setOnCloseRequest(event -> {
-            event.consume();
-            exit(primaryStage);
-        });
+        String generalCss = Objects.requireNonNull(getClass().getResource("/com/example/firstfx/general.css")).toExternalForm();
+        String bestMenuBarCss = Objects.requireNonNull(getClass().getResource("/com/example/firstfx/best-menu-bar.css")).toExternalForm();
+        scene.getStylesheets().add(generalCss);
+        scene.getStylesheets().add(bestMenuBarCss);
+
+        //! check with alert before exiting
+        //  primaryStage.setOnCloseRequest(event -> {
+        //  event.consume();
+        //  exit(primaryStage);
+        //  });
     }
 
     public static void main(String[] args) {

@@ -117,6 +117,9 @@ public class Scene1Controller implements Initializable {
         }
     }
 
+    @FXML
+    MenuBar menuBar;
+
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {

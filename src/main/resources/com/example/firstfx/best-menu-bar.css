@@ -1,0 +1,42 @@
+.menu-bar {
+    -fx-background-color: fx-dark;
+    -fx-padding: 0;
+    -fx-insets: 0;
+    -fx-background-insets: 0;
+}
+
+.menu {
+    -fx-background-color: fx-dark;
+    -fx-color:  fx-light;
+    -fx-padding: 5 10 5 10;
+    -fx-pref-height: 30;
+}
+
+.menu .context-menu {
+    -fx-background-color: fx-dark;
+    -fx-padding: 0;
+    -fx-insets: 0;
+    -fx-background-insets: 0;
+}
+
+.menu-item {
+    -fx-color: fx-dark;
+    -fx-padding: 0 80 0 10;
+    -fx-pref-height: 30;
+    -fx-insets: 0;
+    -fx-background-insets: 0;
+}
+
+
+.menu:hover {
+    -fx-background-color: fx-dark-hover;
+}
+
+.menu-item:hover {
+    -fx-background-color: fx-dark-hover;
+}
+
+/*
+.menu-item >.label {-fx-font-size:17;}
+.menu >.label {-fx-font-size:17;}
+*/
