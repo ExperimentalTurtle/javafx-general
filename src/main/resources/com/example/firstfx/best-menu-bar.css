@@ -3,20 +3,27 @@
     -fx-padding: 0;
     -fx-insets: 0;
     -fx-background-insets: 0;
+    -fx-font-size: 14;
 }
 
 .menu {
     -fx-background-color: fx-dark;
-    -fx-color:  fx-light;
     -fx-padding: 5 10 5 10;
-    -fx-pref-height: 30;
+    -fx-pref-height: 40;
 }
+
 
 .menu .context-menu {
     -fx-background-color: fx-dark;
     -fx-padding: 0;
     -fx-insets: 0;
     -fx-background-insets: 0;
+}
+
+.menu .label,
+.context-menu .label,
+.menu-item .label {
+    -fx-text-fill: fx-light;
 }
 
 .menu:hover {
@@ -27,23 +34,23 @@
     -fx-background-color: fx-dark-hover;
 }
 
+
+
 .context-menu .accelerator-text {
     /*! if icon needed for shortcut */
     /*! -fx-graphic: url("yourImageUrl"); */
 
     -fx-padding: 5;
     -fx-pref-height: 24;
-    -fx-font-size: 11;
-    -fx-text-fill: fx-light-dim
+    -fx-font-size: 10;
+    -fx-text-fill: fx-light-dim;
 }
 
 .menu-item {
     -fx-color: fx-dark;
-    /*-fx-padding: 0 80 0 10;*/
-    -fx-pref-height: 30;
+    -fx-pref-height: 40;
     -fx-insets: 0;
     -fx-background-insets: 0;
-
     -fx-pref-width: 250px;
 }
 
@@ -55,3 +62,4 @@
 .menu-item >.label {-fx-font-size:17;}
 .menu >.label {-fx-font-size:17;}
 */
+

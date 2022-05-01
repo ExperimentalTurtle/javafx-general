@@ -1,5 +1,8 @@
 package com.example.firstfx.controllers;
 
+import javafx.animation.FadeTransition;
+import javafx.animation.RotateTransition;
+import javafx.animation.TranslateTransition;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -12,6 +15,7 @@ import javafx.scene.layout.Background;
 import javafx.scene.layout.BackgroundFill;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
+import javafx.util.Duration;
 
 import java.net.URL;
 import java.util.Objects;
@@ -128,6 +132,9 @@ public class Scene1Controller implements Initializable {
         alert.showAndWait();
     }
 
+    @FXML
+    ImageView animationImageView;
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         choiceBox.getItems().addAll(generalItems);
@@ -173,5 +180,37 @@ public class Scene1Controller implements Initializable {
 
         contextMenu.getItems().addAll(menuItem1, menuItem2, menuItem3);
         treeView.setContextMenu(contextMenu);
+
+        // animation
+        TranslateTransition transition = new TranslateTransition();
+        transition.setDuration(Duration.millis(1000));
+        transition.setCycleCount(TranslateTransition.INDEFINITE);
+        transition.setByY(250);
+        transition.setAutoReverse(true);
+
+
+        RotateTransition rotateTransition = new RotateTransition();
+        rotateTransition.setDuration(Duration.millis(1000));
+        rotateTransition.setCycleCount(TranslateTransition.INDEFINITE);
+        rotateTransition.setByAngle(360);
+        rotateTransition.setAutoReverse(true);
+
+        FadeTransition fadeTransition = new FadeTransition();
+        fadeTransition.setDuration(Duration.millis(1000));
+        fadeTransition.setCycleCount(TranslateTransition.INDEFINITE);
+        fadeTransition.setFromValue(1);
+        fadeTransition.setToValue(0);
+        fadeTransition.setAutoReverse(true);
+
+
+
+        // start animating three of them at the same time for same image
+        transition.setNode(animationImageView);
+        rotateTransition.setNode(animationImageView);
+        fadeTransition.setNode(animationImageView);
+
+        transition.play();
+        rotateTransition.play();
+        fadeTransition.play();
     }
 }

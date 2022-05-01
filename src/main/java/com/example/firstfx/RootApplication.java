@@ -11,7 +11,7 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.util.Objects;
 
-@SuppressWarnings("CommentedOutCode")
+@SuppressWarnings({"CommentedOutCode", "SwitchStatementWithTooFewBranches"})
 public class RootApplication extends Application {
     //TODO https://stackoverflow.com/questions/37200845/how-to-switch-scenes-in-javafx
     //TODO do this, best solution to scene changing
@@ -22,7 +22,7 @@ public class RootApplication extends Application {
 
         // start with login screen
         // FXMLLoader fxmlLoader = new FXMLLoader(RootApplication.class.getResource("/com/example/firstfx/login.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 1400, 800, Color.LIGHTSKYBLUE);
+        Scene scene = new Scene(fxmlLoader.load(), 1400, 1000, Color.LIGHTSKYBLUE);
         primaryStage.setTitle("Hello!");
         primaryStage.setScene(scene);
         primaryStage.show();
@@ -38,6 +38,16 @@ public class RootApplication extends Application {
         //  event.consume();
         //  exit(primaryStage);
         //  });
+
+        //! detect all keyboard events for scene
+        scene.setOnKeyPressed(keyEvent -> {
+            System.out.println(keyEvent.getCode());
+
+            switch (keyEvent.getCode()) {
+                case W -> System.out.println("W was pressed");
+                default -> System.out.printf("Other key was pressed {%s}%n", keyEvent.getCode());
+            }
+        });
     }
 
     public static void main(String[] args) {

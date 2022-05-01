@@ -41,37 +41,37 @@
     <Button layoutX="274.0" layoutY="358.0" mnemonicParsing="false" onAction="#next" text="Next" />
     <Button layoutX="211.0" layoutY="357.0" mnemonicParsing="false" onAction="#prev" text="Prev" />
    <ColorPicker fx:id="colorPicker" layoutX="358.0" layoutY="358.0" onAction="#setBackgroundColor" />
-   <ChoiceBox fx:id="choiceBox" layoutX="224.0" layoutY="473.0" prefWidth="150.0" />
-   <ComboBox layoutX="428.0" layoutY="473.0" prefWidth="150.0" />
-   <SplitMenuButton layoutX="651.0" layoutY="474.0" mnemonicParsing="false" text="SplitMenuButton">
+   <ChoiceBox fx:id="choiceBox" layoutX="27.0" layoutY="465.0" prefWidth="150.0" />
+   <ComboBox layoutX="236.0" layoutY="465.0" prefWidth="150.0" />
+   <SplitMenuButton layoutX="38.0" layoutY="403.0" mnemonicParsing="false" text="SplitMenuButton">
      <items>
        <MenuItem mnemonicParsing="false" text="Action 1" />
        <MenuItem mnemonicParsing="false" text="Action 2" />
      </items>
    </SplitMenuButton>
-   <Label fx:id="choiceBoxLabel" layoutX="227.0" layoutY="575.0" prefHeight="55.0" prefWidth="330.0" text="From combobox">
+   <Label fx:id="choiceBoxLabel" layoutX="37.0" layoutY="530.0" prefHeight="55.0" prefWidth="330.0" text="From combobox">
       <font>
          <Font name="System Bold" size="30.0" />
       </font>
    </Label>
-   <Slider fx:id="slider" layoutX="877.0" layoutY="115.0" majorTickUnit="10.0" orientation="VERTICAL" prefHeight="325.0" prefWidth="16.0" showTickLabels="true" showTickMarks="true" snapToTicks="true" value="10.0" />
-   <Label fx:id="sliderLabel" layoutX="227.0" layoutY="662.0" prefHeight="55.0" prefWidth="330.0" text="From slider">
+   <Slider fx:id="slider" layoutX="549.0" layoutY="64.0" majorTickUnit="10.0" orientation="VERTICAL" prefHeight="325.0" prefWidth="16.0" showTickLabels="true" showTickMarks="true" snapToTicks="true" value="10.0" />
+   <Label fx:id="sliderLabel" layoutX="37.0" layoutY="617.0" prefHeight="55.0" prefWidth="330.0" text="From slider">
       <font>
          <Font name="System Bold" size="30.0" />
       </font>
    </Label>
-   <ProgressBar layoutX="705.0" layoutY="583.0" prefWidth="200.0" />
-   <ProgressBar fx:id="progressBar" layoutX="705.0" layoutY="630.0" prefWidth="200.0" progress="0.0" />
-   <Button layoutX="705.0" layoutY="666.0" mnemonicParsing="false" onAction="#onProgressBarIncrement" prefHeight="24.0" prefWidth="83.0" text="inc" />
-   <Label fx:id="progressBarLabel" layoutX="805.0" layoutY="666.0" prefHeight="24.0" prefWidth="154.0" text="value of progress" />
-   <ListView fx:id="listView" layoutX="1012.0" layoutY="247.0" prefHeight="200.0" prefWidth="200.0" />
-   <Label fx:id="listViewLabel" alignment="CENTER_RIGHT" layoutX="1012.0" layoutY="193.0" prefHeight="24.0" prefWidth="200.0" text="List view items">
+   <ProgressBar layoutX="67.0" layoutY="716.0" prefWidth="200.0" />
+   <ProgressBar fx:id="progressBar" layoutX="67.0" layoutY="763.0" prefWidth="200.0" progress="0.0" />
+   <Button layoutX="67.0" layoutY="799.0" mnemonicParsing="false" onAction="#onProgressBarIncrement" prefHeight="24.0" prefWidth="83.0" text="inc" />
+   <Label fx:id="progressBarLabel" layoutX="167.0" layoutY="799.0" prefHeight="24.0" prefWidth="154.0" text="value of progress" />
+   <ListView fx:id="listView" layoutX="684.0" layoutY="196.0" prefHeight="200.0" prefWidth="200.0" />
+   <Label fx:id="listViewLabel" alignment="CENTER_RIGHT" layoutX="684.0" layoutY="142.0" prefHeight="24.0" prefWidth="200.0" text="List view items">
       <font>
          <Font size="16.0" />
       </font>
    </Label>
-   <TreeView fx:id="treeView" layoutX="1019.0" layoutY="493.0" onMouseClicked="#selectTreeItem" prefHeight="311.0" prefWidth="303.0" />
-    <MenuBar prefHeight="30.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+   <TreeView fx:id="treeView" layoutX="443.0" layoutY="459.0" onMouseClicked="#selectTreeItem" prefHeight="311.0" prefWidth="303.0" />
+    <MenuBar AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
         <Menu mnemonicParsing="false" text="File">
             <MenuItem mnemonicParsing="false" onAction="#onMenuBarItemClick" text="Menu item with shortcut">
                 <accelerator>
@@ -94,4 +94,7 @@
             <MenuItem mnemonicParsing="false" text="About" />
         </Menu>
     </MenuBar>
+    <ImageView fx:id="animationImageView" fitHeight="150.0" fitWidth="200.0" layoutX="817.0" layoutY="475.0" pickOnBounds="true">
+        <Image url="@shrek2.jpg"/>
+    </ImageView>
 </AnchorPane>
