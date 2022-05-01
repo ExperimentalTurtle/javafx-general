@@ -19,21 +19,36 @@
     -fx-background-insets: 0;
 }
 
-.menu-item {
-    -fx-color: fx-dark;
-    -fx-padding: 0 80 0 10;
-    -fx-pref-height: 30;
-    -fx-insets: 0;
-    -fx-background-insets: 0;
-}
-
-
 .menu:hover {
     -fx-background-color: fx-dark-hover;
 }
 
-.menu-item:hover {
+.menu-item:hover, .menu-item:focused{
     -fx-background-color: fx-dark-hover;
+}
+
+.context-menu .accelerator-text {
+    /*! if icon needed for shortcut */
+    /*! -fx-graphic: url("yourImageUrl"); */
+
+    -fx-padding: 5;
+    -fx-pref-height: 24;
+    -fx-font-size: 11;
+    -fx-text-fill: fx-light-dim
+}
+
+.menu-item {
+    -fx-color: fx-dark;
+    /*-fx-padding: 0 80 0 10;*/
+    -fx-pref-height: 30;
+    -fx-insets: 0;
+    -fx-background-insets: 0;
+
+    -fx-pref-width: 250px;
+}
+
+.menu-item > .label {
+    -fx-pref-width: 200px;
 }
 
 /*

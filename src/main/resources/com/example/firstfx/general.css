@@ -1,7 +1,12 @@
 * {
     fx-dark: #212121;
     fx-dark-hover: #545454;
+    fx-light: #000000;
+    fx-light-dim: derive(fx-light, 90%);
+
+    /*
     fx-light: #ff0033;
-    /* fx-text-light: derive(fx-text-dark, 50%); */
+    fx-text-light: derive(fx-text-dark, 50%);
+    */
 }
 

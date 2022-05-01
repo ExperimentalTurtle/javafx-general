@@ -117,9 +117,16 @@ public class Scene1Controller implements Initializable {
         }
     }
 
-    @FXML
-    MenuBar menuBar;
+    public void onMenuBarItemClick(ActionEvent event) {
+        MenuItem menuItem = (MenuItem) event.getSource();
+        System.out.println(menuItem.getText());
 
+        Alert alert = new Alert(AlertType.INFORMATION);
+        alert.setTitle(menuItem.getText());
+        alert.setHeaderText("Shortcut key pressed !");
+        alert.setContentText("Do you want to exit ?");
+        alert.showAndWait();
+    }
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {

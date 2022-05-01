@@ -27,6 +27,7 @@ public class RootApplication extends Application {
         primaryStage.setScene(scene);
         primaryStage.show();
 
+        //! load css
         String generalCss = Objects.requireNonNull(getClass().getResource("/com/example/firstfx/general.css")).toExternalForm();
         String bestMenuBarCss = Objects.requireNonNull(getClass().getResource("/com/example/firstfx/best-menu-bar.css")).toExternalForm();
         scene.getStylesheets().add(generalCss);

@@ -16,6 +16,7 @@
 <?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
+<?import javafx.scene.input.KeyCodeCombination?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.paint.Color?>
 <?import javafx.scene.text.Font?>
@@ -64,7 +65,7 @@
    <Button layoutX="705.0" layoutY="666.0" mnemonicParsing="false" onAction="#onProgressBarIncrement" prefHeight="24.0" prefWidth="83.0" text="inc" />
    <Label fx:id="progressBarLabel" layoutX="805.0" layoutY="666.0" prefHeight="24.0" prefWidth="154.0" text="value of progress" />
    <ListView fx:id="listView" layoutX="1012.0" layoutY="247.0" prefHeight="200.0" prefWidth="200.0" />
-   <Label fx:id="listViewLabel" layoutX="1012.0" layoutY="193.0" prefHeight="24.0" prefWidth="200.0" text="List view items">
+   <Label fx:id="listViewLabel" alignment="CENTER_RIGHT" layoutX="1012.0" layoutY="193.0" prefHeight="24.0" prefWidth="200.0" text="List view items">
       <font>
          <Font size="16.0" />
       </font>
@@ -72,9 +73,17 @@
    <TreeView fx:id="treeView" layoutX="1019.0" layoutY="493.0" onMouseClicked="#selectTreeItem" prefHeight="311.0" prefWidth="303.0" />
     <MenuBar prefHeight="30.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
         <Menu mnemonicParsing="false" text="File">
-            <MenuItem mnemonicParsing="false" text="Close" />
+            <MenuItem mnemonicParsing="false" onAction="#onMenuBarItemClick" text="Menu item with shortcut">
+                <accelerator>
+                   <KeyCodeCombination alt="DOWN" code="N" control="UP" meta="UP" shift="UP" shortcut="UP" />
+                </accelerator>
+            </MenuItem>
             <MenuItem mnemonicParsing="false" text="Close1" />
-            <MenuItem mnemonicParsing="false" text="Close2" />
+            <MenuItem mnemonicParsing="false" text="Close2">
+                <accelerator>
+                    <KeyCodeCombination alt="DOWN" code="X" control="UP" meta="UP" shift="UP" shortcut="UP" />
+                </accelerator>
+            </MenuItem>
             <MenuItem mnemonicParsing="false" text="Close3" />
             <MenuItem mnemonicParsing="false" text="Close4" />
         </Menu>
